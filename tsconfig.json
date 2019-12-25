@@ -15,7 +15,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@jd/core": ["dist/libs/core"],
+      "@jd/c-frame": ["dist/libs/c-frame"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
