@@ -3,12 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from "./app-routing.module";
+import { CFrameModule } from "@jd/c-frame";
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' })
+    AppRoutingModule,
+    RouterModule,
+    CFrameModule
   ],
   providers: [],
   bootstrap: [AppComponent]

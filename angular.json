@@ -23,7 +23,10 @@
             "aot": false,
             "assets": ["apps/demo/src/favicon.ico", "apps/demo/src/assets"],
             "styles": ["apps/demo/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "lazyModules" : [
+              "apps/demo/src/app/cm/cm.module"
+            ]
           },
           "configurations": {
             "production": {

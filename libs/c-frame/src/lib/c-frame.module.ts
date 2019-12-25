@@ -4,6 +4,8 @@ import { CFrameComponent } from './components/c-frame/c-frame.component';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [CFrameComponent]
+  declarations: [CFrameComponent],
+  exports : [CFrameComponent],
 })
-export class CFrameModule {}
+export class CFrameModule {
+}
