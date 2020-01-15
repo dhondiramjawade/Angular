@@ -18,10 +18,7 @@
       "tags": []
     },
     "c-frame": {
-      "tags": []
-    },
-    "core-r-timeline": {
-      "tags": []
+      "tags": ["c-trame"]
     }
   }
 }
