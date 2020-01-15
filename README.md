@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # core_lib
 
 ng g @nrwl/angular:lib --name=core  --simpleModuleName  --prefix=core --publishable
@@ -17,7 +16,6 @@ npm install webpack webpack-cli webpack-dev-server raw-loader file-loader url-lo
 
 # build cmd
 
-=======
 #core_lib
 ng g @nrwl/angular:lib --name=core  --simpleModuleName  --prefix=core --publishable
 
@@ -32,5 +30,4 @@ npm install webpack webpack-cli webpack-dev-server raw-loader file-loader url-lo
 
 
 #build cmd
->>>>>>> rebase master to staging
 ng build core && ng build modules-cm-core && ng build modules-cm-abc-wo
