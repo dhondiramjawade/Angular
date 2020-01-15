@@ -18,7 +18,10 @@
       "tags": []
     },
     "c-frame": {
-      "tags": ["c-trame"]
+      "tags": []
+    },
+    "core-r-timeline": {
+      "tags": []
     }
   }
 }

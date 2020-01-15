@@ -3,5 +3,6 @@
   "compilerOptions": {
     "types": ["node", "jest"]
   },
-  "include": ["**/*.ts"]
+  "include": ["src/*.ts"],
+  "exclude": ["rtimeline"]
 }
