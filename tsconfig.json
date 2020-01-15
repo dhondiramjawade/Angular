@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "@jd/core": ["dist/libs/core"],
-      "@jd/c-frame": ["dist/libs/c-frame"]
+      "@jd/c-frame": ["dist/libs/c-frame"],
+      "@jd/core/r-timeline": ["dist/libs/core/r-timeline"]
     }
   },
   "exclude": ["node_modules", "tmp"]

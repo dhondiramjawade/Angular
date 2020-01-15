@@ -24,9 +24,7 @@
             "assets": ["apps/demo/src/favicon.ico", "apps/demo/src/assets"],
             "styles": ["apps/demo/src/styles.scss"],
             "scripts": [],
-            "lazyModules" : [
-              "apps/demo/src/app/cm/cm.module"
-            ]
+            "lazyModules": ["apps/demo/src/app/cm/cm.module"]
           },
           "configurations": {
             "production": {
@@ -124,37 +122,6 @@
         }
       }
     },
-    "core": {
-      "projectType": "library",
-      "root": "libs/core",
-      "sourceRoot": "libs/core/src",
-      "prefix": "a",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/core/tsconfig.lib.json",
-              "libs/core/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/core/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/core/jest.config.js",
-            "tsConfig": "libs/core/tsconfig.spec.json",
-            "setupFile": "libs/core/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
     "c-frame": {
       "projectType": "library",
       "root": "libs/c-frame",
@@ -184,6 +151,82 @@
             "jestConfig": "libs/c-frame/jest.config.js",
             "tsConfig": "libs/c-frame/tsconfig.spec.json",
             "setupFile": "libs/c-frame/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "core": {
+      "projectType": "library",
+      "root": "libs/core",
+      "sourceRoot": "libs/core/src",
+      "prefix": "core",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/core/tsconfig.lib.json",
+            "project": "libs/core/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/tsconfig.lib.json",
+              "libs/core/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/core/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/jest.config.js",
+            "tsConfig": "libs/core/tsconfig.spec.json",
+            "setupFile": "libs/core/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "core-r-timeline": {
+      "projectType": "library",
+      "root": "libs/core/r-timeline",
+      "sourceRoot": "libs/core/r-timeline/src",
+      "prefix": "core",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/core/r-timeline/tsconfig.lib.json",
+            "project": "libs/core/r-timeline/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/r-timeline/tsconfig.lib.json",
+              "libs/core/r-timeline/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/core/r-timeline/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/r-timeline/jest.config.js",
+            "tsConfig": "libs/core/r-timeline/tsconfig.spec.json",
+            "setupFile": "libs/core/r-timeline/src/test-setup.ts"
           }
         }
       },
