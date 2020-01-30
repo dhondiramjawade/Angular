@@ -1,5 +1,6 @@
 Hello Demo
 <router-outlet></router-outlet>
-
-<c-frame [modulePath]="'apps/demo/src/app/cm/cm.module#CmModule'" [componentName]="'CmTempComponent'"></c-frame>
+name : {{data.name}}
+<input type="text" [(ngModel)]="data.name" (onchange)="OnChnage()">
+<c-frame [modulePath]="'apps/demo/src/app/cm/cm.module#CmModule'" [componentName]="'CmTempComponent'" [(dataInput)]='data'></c-frame>
 <c-frame [modulePath]="'apps/demo/src/app/cm/cm.module#CmModule'" [componentName]="'CmTempComponent'"></c-frame>

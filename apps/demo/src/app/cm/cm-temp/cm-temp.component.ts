@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'a-cm-temp',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cm-temp.component.scss']
 })
 export class CmTempComponent implements OnInit {
-
+  @Input() name : string;
+  @Input() abc: string;
   constructor() { }
 
   ngOnInit() {

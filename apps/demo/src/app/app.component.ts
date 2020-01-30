@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo';
+  data = {
+    name :"Yahs",
+    abc : "Abc"
+  }
+
+  onChnage(){
+    console.log(this.data.name);
+  }
 }

@@ -1,4 +1,11 @@
-import { Injectable, NgModuleFactoryLoader, NgModuleFactory , Injector, Compiler } from '@angular/core';
+import { 
+  Injectable, 
+  NgModuleFactoryLoader, 
+  NgModuleFactory , 
+  Injector, 
+  Compiler,
+  ComponentFactoryResolver 
+} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +14,7 @@ export class CFrameService {
 
   constructor(
     private ngModuleLoader : NgModuleFactoryLoader,
+    private cr : ComponentFactoryResolver,
     private injector : Injector,
     private ngCompiler : Compiler
     ) { }
@@ -20,9 +28,9 @@ export class CFrameService {
   }
 
   getComponentFromModuleFactory(moduleFactory : NgModuleFactory<any>){
-    const moduleRef=   moduleFactory.create(this.injector);
-    // const mf = this.ngCompiler.compileModuleAndAllComponentsSync(moduleFactory.moduleType);
-    const entryComponent = (<any>moduleFactory.moduleType).entry;
-    return moduleRef.componentFactoryResolver.resolveComponentFactory(entryComponent);
+    // const moduleRef=   moduleFactory.create(this.injector);
+    // const entryComponent = (<any>moduleFactory.moduleType).entry;
+    // return moduleRef.componentFactoryResolver.resolveComponentFactory(entryComponent);
+    return moduleFactory;
   }
 }
